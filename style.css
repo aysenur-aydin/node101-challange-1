@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --default-color: #b9b9b9;
+  /* --color-videos: #ae54a4;
+  --color-wishlist: #a45e12;
+  --color-assignment: #4658a8;
+  --color-projects: #319c8f;
+  --color-work: #b64963;
+  --color-study: #b88a2b; */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.rubik-regular {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-container {
+  background-color: #303030;
+  color: #ffffff;
+  min-height: 100vh;
+  max-width: 100vw;
+  /* display: flex; */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #383838;
+}
+
+.header-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  border-right: 2px solid #383838;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  width: 20%;
+}
+
+.profile-picture-container {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  border: 2px solid #36d5c4;
+  border-radius: 50%;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 0.75rem;
+  border-bottom: 1px solid #383838;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.badge {
+  background-color: var(--default-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+[data-category='videos'] .badge,
+[data-category='videos'] .count-badge,
+[data-category='videos'].note-card {
+  background-color: var(--color-videos);
+}
+
+[data-category='videos'] .note-category-text {
+  color: var(--color-videos);
+}
+
+[data-category='wishlist'] .badge,
+[data-category='wishlist'] .count-badge,
+[data-category='wishlist'].note-card {
+  background-color: var(--color-wishlist);
+}
+
+[data-category='wishlist'] .note-category-text {
+  color: var(--color-wishlist);
+}
+
+[data-category='assignment'] .badge,
+[data-category='assignment'] .count-badge,
+[data-category='assignment'].note-card {
+  background-color: var(--color-assignment);
+}
+
+[data-category='assignment'] .note-category-text {
+  color: var(--color-assignment);
+}
+
+[data-category='projects'] .badge,
+[data-category='projects'] .count-badge,
+[data-category='projects'].note-card {
+  background-color: var(--color-projects);
+}
+
+[data-category='projects'] .note-category-text {
+  color: var(--color-projects);
+}
+
+[data-category='work'] .badge,
+[data-category='work'] .count-badge,
+[data-category='work'].note-card {
+  background-color: var(--color-work);
+}
+
+[data-category='work'] .note-category-text {
+  color: var(--color-work);
+}
+
+[data-category='study'] .badge,
+[data-category='study'] .count-badge,
+[data-category='study'].note-card {
+  background-color: var(--color-study);
+}
+
+[data-category='study'] .note-category-text {
+  color: var(--color-study);
+}
+
+.list-text {
+  flex-grow: 1;
+}
+
+.count-badge {
+  background-color: var(--default-color);
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.count-text {
+  color: aliceblue;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.content {
+  width: 100%;
+}
+
+.header-title {
+  flex-grow: 1;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/* From Uiverse.io by AbanoubMagdy1 */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 0.875rem;
+  color: black;
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 1.75em;
+  overflow: hidden;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #868585;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 20px;
+  border: 1px solid #333;
+  left: 0.4em;
+  bottom: 0.2em;
+  background-color: black;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: whitesmoke;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px whitesmoke;
+}
+
+input:checked + .slider:before {
+  transform: translateX(3em);
+}
+
+.switch .text {
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  transition: 0.4s;
+}
+
+.switch .text.on {
+  left: 0.8rem;
+  transform: translateX(-3rem) translateY(-50%);
+}
+
+.switch .text.off {
+  color: whitesmoke;
+  right: 0.8rem;
+}
+
+input:checked ~ .text.off {
+  transform: translateX(3rem) translateY(-50%);
+}
+
+input:checked ~ .text.on {
+  transform: translateX(0) translateY(-50%);
+}
+
+.add-new-note-btn {
+  background-color: #36d5c4;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.notes-container {
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.note-card {
+  flex: 1 1 calc(50% - 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--default-color);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  max-width: calc(50% - 1.5rem);
+}
+
+.note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-content {
+  font-size: 1rem;
+  line-height: 2em;
+  color: #ffffff;
+}
+
+.note-category-text {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
