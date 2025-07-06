@@ -6,12 +6,6 @@
 
 :root {
   --default-color: #b9b9b9;
-  /* --color-videos: #ae54a4;
-  --color-wishlist: #a45e12;
-  --color-assignment: #4658a8;
-  --color-projects: #319c8f;
-  --color-work: #b64963;
-  --color-study: #b88a2b; */
 }
 
 body {
@@ -44,7 +38,6 @@ input[type='submit'] {
   color: #ffffff;
   min-height: 100vh;
   max-width: 100vw;
-  /* display: flex; */
 }
 
 .header-container {
