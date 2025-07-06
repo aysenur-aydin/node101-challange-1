@@ -256,14 +256,14 @@ input[type='submit'] {
 
 .note-content {
   font-size: 1rem;
-  line-height: 2em;
+  line-height: 2.5;
   color: #ffffff;
 }
 
 .note-category-text {
   background-color: #ffffff;
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 1rem 0.75rem;
+  border-radius: 12px;
   color: var(--default-color);
   font-weight: 600;
 }
